@@ -1,7 +1,6 @@
 package com.parallel.framework;
 
 
-import com.ctrip.payment.provider.common.constant.ResultCodeEnum;
 
 /**
  * Created by b_lin on 2018/4/18.

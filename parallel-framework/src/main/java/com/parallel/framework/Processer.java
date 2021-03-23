@@ -298,7 +298,7 @@ public abstract class Processer<Req,Resp> extends Level implements Cloneable {
      * possible null!!!!
      * @return possible null!!!
      */
-    public Resp getResponse() {
+    protected Resp getResponse() {
         if (response != null) {
             return response;
         }
