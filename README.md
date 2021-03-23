@@ -4,11 +4,11 @@ A framework for parallel operations with complex dependencies 具有复杂依赖
 test里面有Demo，大致运行思路如下，尽可能并行
 
       A	    B        D
-	   \   /        /
+       \   /        /
          C         / 
-		 |  \     /
-		 |   \   /
-		 F     E
-		  \   /
-		    G 
+         |  \     /
+         |   \   /
+         F     E
+          \   /
+            G 
 			
