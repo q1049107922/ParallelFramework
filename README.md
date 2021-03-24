@@ -18,10 +18,10 @@ A framework for parallel operations with complex dependencies 具有复杂依赖
 C依赖于A和B
 那么直接在E里面用@Dependency声明依赖关系即可：
     
-	 @Dependency
+	 ```@Dependency
      AaaProc aaaProc;
      @Dependency
-     BbbProc bbbProc;
+     BbbProc bbbProc;```
 
 框架会自动去处理执行顺序问题，确保C执行之前，A和B优先被执行。
 
@@ -40,11 +40,11 @@ F依赖与C，E也依赖于C，并不意味着C要执行两遍。
      <dependency>
        <groupId>com.parallel.framework</groupId>
        <artifactId>parallel-framework</artifactId>
-       <version>1.0.0</version>
+       <version>1.0.1</version>
      </dependency>
      
 ### 备注说明
 该框架只提供了最基础的代码实现，并且已经在公司核心系统生产应用。
-生产最多支持过40+个处理器的情况，qps：200+，运行1年左右，运行表现良好。
+生产最多支持过40+个处理器的情况（目前也没有设置上限），qps：200+，运行1年左右，运行表现良好。
 处理器的执行以及调度虽然耗费少量性能，但是简洁了复杂的调用关系，提高了代码的可读性。
 里面还有很多可以优化的空间，欢迎各位coder提issues。
