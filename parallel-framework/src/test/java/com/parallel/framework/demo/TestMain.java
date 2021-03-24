@@ -1,5 +1,7 @@
-package com.parallel.framework;
+package com.parallel.framework.demo;
 
+import com.parallel.framework.AutoCloseProcessEngine;
+import com.parallel.framework.Processer;
 import com.parallel.framework.demo.TestProcessContext;
 import com.parallel.framework.demo.proc.GggProc;
 import com.parallel.framework.demo.proc.TotalCostTimeProc;
