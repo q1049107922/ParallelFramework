@@ -17,11 +17,12 @@ A framework for parallel operations with complex dependencies 具有复杂依赖
 
 C依赖于A和B
 那么直接在E里面用@Dependency声明依赖关系即可：
-    
-	 ```@Dependency
+     #```
+	 @Dependency
      AaaProc aaaProc;
      @Dependency
-     BbbProc bbbProc;```
+     BbbProc bbbProc;
+	 #```
 
 框架会自动去处理执行顺序问题，确保C执行之前，A和B优先被执行。
 
