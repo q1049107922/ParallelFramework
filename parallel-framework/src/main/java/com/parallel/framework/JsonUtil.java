@@ -63,7 +63,7 @@ public class JsonUtil {
             return null;
         }
     }
-
+/*
     public static <T> T jsonToBean(String jsonStr, TypeReference clazz) {
         try {
             return (T) mapper.readValue(jsonStr, clazz);
@@ -71,7 +71,7 @@ public class JsonUtil {
             logger.error(jsonStr,e);
             return null;
         }
-    }
+    }*/
 
     public static <T> T deepCopy(Object source, Class<? extends T> clazz) {
         return jsonToBean(beanToJson(source), clazz);

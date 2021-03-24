@@ -1,6 +1,7 @@
 # ParallelFramework
 A framework for parallel operations with complex dependencies 具有复杂依赖关系的并行操作框架
 
+### 原理说明
 test里面有Demo，大致运行思路如下，将业务抽象成一个一个的处理器，尽可能的并行执行
 
      A     B       D
@@ -31,4 +32,19 @@ E依赖C和D，同时C依赖A和B，对于E来说E并不知道A和B的存在。�
 F依赖与C，E也依赖于C，并不意味着C要执行两遍。
 再获取依赖处理器结果的时候会率先去已执行的处理器集合中查找**类型一致的，并且getRequest请求参数完全一致**的时候，会直接复用已执行的结果，避免重复执行。
 
+### 处理器支持Spring注入
+处理器支持Spring注入，但是处理器需要保持多例，因为处理器含有私有变量。
 
+### maven：
+      
+     <dependency>
+       <groupId>com.parallel.framework</groupId>
+       <artifactId>parallel-framework</artifactId>
+       <version>1.0.0</version>
+     </dependency>
+     
+### 备注说明
+该框架只提供了最基础的代码实现，并且已经在公司核心系统生产应用。
+生产最多支持过40+个处理器的情况，qps：200+，运行1年左右，运行表现良好。
+处理器的执行以及调度虽然耗费少量性能，但是简洁了复杂的调用关系，提高了代码的可读性。
+里面还有很多可以优化的空间，欢迎各位coder提issues。
