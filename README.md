@@ -2,7 +2,7 @@
 A framework for parallel operations with complex dependencies 具有复杂依赖关系的并行操作框架
 
 ### 原理说明
-test里面有Demo，大致运行思路如下，将业务抽象成一个一个的处理器，尽可能的并行执行
+该系统适用于接口IO交互较多并且接口相互关系复杂的系统。test里面有Demo，大致运行思路如下，将业务接口抽象成一个一个的处理器，一共有A、B、C、D、E、F、G 7个处理器，C依赖与AB，F依赖于C，E依赖于CD，G依赖于EF，执行关系如下图，尽可能的并行执行
 
      A     B       D
       \   /       /
