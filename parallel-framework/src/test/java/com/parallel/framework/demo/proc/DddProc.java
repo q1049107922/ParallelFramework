@@ -42,4 +42,12 @@ public class DddProc extends TestProcesser<ReqDdd,RespDdd> {
         }
         return "";
     }
+
+    public Integer getDddCostTime(){
+        RespDdd resp = getResponse();
+        if(resp!=null){
+            return resp.getDddCode();
+        }
+        return 0;
+    }
 }

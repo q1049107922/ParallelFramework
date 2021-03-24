@@ -47,4 +47,12 @@ public class FffProc extends TestProcesser<ReqFff,RespFff> {
         }
         return "";
     }
+
+    public Integer getFffCostTime(){
+        RespFff resp = getResponse();
+        if(resp!=null){
+            return resp.getFffCode();
+        }
+        return 0;
+    }
 }

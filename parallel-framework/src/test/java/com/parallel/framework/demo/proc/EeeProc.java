@@ -49,4 +49,13 @@ public class EeeProc extends TestProcesser<ReqEee,RespEee> {
         }
         return "";
     }
+
+
+    public Integer getEeeCostTime(){
+        RespEee resp = getResponse();
+        if(resp!=null){
+            return resp.getEeeCode();
+        }
+        return 0;
+    }
 }

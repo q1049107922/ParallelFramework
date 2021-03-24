@@ -49,4 +49,14 @@ public class GggProc extends TestProcesser<ReqGgg,RespGgg> {
         }
         return "";
     }
+
+    public Integer getGggCostTime(){
+        RespGgg resp = getResponse();
+        if(resp!=null){
+            return resp.getGggCode();
+        }
+        return 0;
+    }
+
+
 }
