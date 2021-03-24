@@ -16,7 +16,8 @@ test里面有Demo，大致运行思路如下，将业务抽象成一个一个的
 
 C依赖于A和B
 那么直接在E里面用@Dependency声明依赖关系即可：
-     @Dependency
+    
+	 @Dependency
      AaaProc aaaProc;
      @Dependency
      BbbProc bbbProc;
