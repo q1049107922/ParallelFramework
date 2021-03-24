@@ -16,10 +16,10 @@ test里面有Demo，大致运行思路如下，将业务抽象成一个一个的
 
 C依赖于A和B
 那么直接在E里面用@Dependency声明依赖关系即可：
-    @Dependency
-    AaaProc aaaProc;
-    @Dependency
-    BbbProc bbbProc;
+     @Dependency
+     AaaProc aaaProc;
+     @Dependency
+     BbbProc bbbProc;
 
 框架会自动去处理执行顺序问题，确保C执行之前，A和B优先被执行。
 
