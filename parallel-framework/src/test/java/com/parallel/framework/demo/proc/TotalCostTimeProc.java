@@ -3,6 +3,7 @@ package com.parallel.framework.demo.proc;
 import com.parallel.framework.DealRequestContext;
 import com.parallel.framework.Dependency;
 import com.parallel.framework.Result;
+import com.parallel.framework.SuccessResult;
 import com.parallel.framework.demo.TestProcessContext;
 import com.parallel.framework.demo.TestProcesser;
 import com.parallel.framework.demo.entity.ReqGgg;
@@ -32,7 +33,7 @@ public class TotalCostTimeProc extends TestProcesser<Integer,Integer> {
 
     @Override
     protected Result<DealRequestContext<Integer, Integer>> executeContext(Integer request) throws Exception {
-        return null;
+        return SuccessResult.quickResult(0,0);
     }
 
     public Integer getTotalCostTime() {
